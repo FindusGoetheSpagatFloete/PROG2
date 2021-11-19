@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>"Test"</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <a href="{{ url_for('test')}}">Link zu Wurstwasser</a>
+</head>
+<body>
+    <h1>Hallo {{ name }}</h1>
+
+    <!--Tabelle die Ligatopscorer zeigt also Skorer mit den meisten Goals und Assists zusammen-->
+
+    <h2>Liga Topscorer Tabelle</h2>
+    <table>
+  <tr>
+    <th>Player</th>
+    <th>Team</th>
+    <th>Points</th>
+    <th>Goals</th>
+    <th>Assists</th>
+  </tr>
+  <tr>
+    <td>Toni Rajala</td>
+    <td>EHC Biel</td>
+    <td>23</td>
+    <td>11</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>Matthias Bromé</td>
+    <td>HC Davos</td>
+    <td>22</td>
+    <td>8</td>
+    <td>14</td>
+  </tr>
+    </table>
+
+    <!--Tabelle die die besten Goalscorer zeigt, Spieler mit den meisten Goals oben-->
+
+<h2>Goalscorer Tabelle</h2>
+    <table>
+  <tr>
+    <th>Player</th>
+    <th>Team</th>
+    <th>Goals</th>
+  </tr>
+  <tr>
+    <td>Alex Ovechkin</td>
+    <td>Washington Capitals</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Patrick Kane</td>
+    <td>Chicago Blackhawks</td>
+    <td>9</td>
+  </tr>
+    </table>
+
+<!--Tabelle die die besten Assistgeber zeigt, Spieler mit den meisten Assists oben-->
+
+<h2>Assists Tabelle</h2>
+    <table>
+  <tr>
+    <th>Player</th>
+    <th>Team</th>
+    <th>Assists</th>
+  </tr>
+  <tr>
+    <td>Evgeni Kusnetzov</td>
+    <td>Washington Capitals</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td>Alex Debricant</td>
+    <td>Chicago Blackhawks</td>
+    <td>12</td>
+  </tr>
+    </table>
+
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</body>
+</html>
