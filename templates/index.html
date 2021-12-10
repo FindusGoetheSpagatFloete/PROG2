@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>"Test"</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-    <a href="{{ url_for('test')}}">Link zu Wurstwasser</a>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid2">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{ url_for('hello') }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{ url_for('test') }}">Link zu Wurstwasser</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="m-3">
     <h1>Hallo {{ name }}</h1>
 
     <!--Tabelle die Ligatopscorer zeigt also Skorer mit den meisten Goals und Assists zusammen-->
 
     <h2>Liga Topscorer Tabelle</h2>
-    <table>
+    <table class="table table-hover">
   <tr>
     <th>Player</th>
     <th>Team</th>
@@ -39,7 +56,7 @@
     <!--Tabelle die die besten Goalscorer zeigt, Spieler mit den meisten Goals oben-->
 
 <h2>Goalscorer Tabelle</h2>
-    <table>
+    <table class="table table-hover">
   <tr>
     <th>Player</th>
     <th>Team</th>
@@ -60,7 +77,7 @@
 <!--Tabelle die die besten Assistgeber zeigt, Spieler mit den meisten Assists oben-->
 
 <h2>Assists Tabelle</h2>
-    <table>
+    <table class="table table-hover">
   <tr>
     <th>Player</th>
     <th>Team</th>
@@ -78,22 +95,8 @@
   </tr>
     </table>
 
-<form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
+
+</div>
 </body>
 </html>
