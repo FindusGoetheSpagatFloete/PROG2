@@ -8,7 +8,9 @@ app = Flask("Hello World")
 @app.route("/")
 @app.route("/hello")
 def hello():
-    return render_template('index.html', name="Andri")
+    bla = 23 / 12
+    zahl = round(bla, 2)
+    return render_template('index.html', name="Andri",ergebnis=zahl)
 
 @app.route("/test", methods= ["GET", "POST"])
 def test():
@@ -31,6 +33,10 @@ def test():
 
 
     return render_template('spieler_formular.html')
+
+@app.route("/team_formular")
+def team_formular():
+    return render_template('team_formular.html')
 
 
 if __name__ == "__main__":

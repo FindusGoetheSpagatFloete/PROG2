@@ -19,6 +19,9 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{{ url_for('test') }}">Link zu Wurstwasser</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{ url_for('team_formular') }}">Team Formular</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -33,23 +36,29 @@
   <tr>
     <th>Player</th>
     <th>Team</th>
+    <th>Spiele</th>
     <th>Points</th>
     <th>Goals</th>
     <th>Assists</th>
+    <th>Punkte pro Spiel</th>
   </tr>
   <tr>
     <td>Toni Rajala</td>
     <td>EHC Biel</td>
+    <td>12</td>
     <td>23</td>
     <td>11</td>
     <td>12</td>
+    <td>{{ ergebnis }}</td>
   </tr>
   <tr>
     <td>Matthias Bromé</td>
     <td>HC Davos</td>
+    <td>10</td>
     <td>22</td>
     <td>8</td>
     <td>14</td>
+    <td>PPG</td>
   </tr>
     </table>
 
@@ -60,16 +69,19 @@
   <tr>
     <th>Player</th>
     <th>Team</th>
+    <th>Spiele</th>
     <th>Goals</th>
   </tr>
   <tr>
     <td>Alex Ovechkin</td>
     <td>Washington Capitals</td>
+    <td>12</td>
     <td>10</td>
   </tr>
   <tr>
     <td>Patrick Kane</td>
     <td>Chicago Blackhawks</td>
+    <td>13</td>
     <td>9</td>
   </tr>
     </table>
@@ -81,17 +93,44 @@
   <tr>
     <th>Player</th>
     <th>Team</th>
+    <th>Spiele</th>
     <th>Assists</th>
   </tr>
   <tr>
     <td>Evgeni Kusnetzov</td>
     <td>Washington Capitals</td>
+    <td>10</td>
     <td>14</td>
   </tr>
   <tr>
     <td>Alex Debricant</td>
     <td>Chicago Blackhawks</td>
+    <td>16</td>
     <td>12</td>
+  </tr>
+    </table>
+
+  <!-- Tabelle soll Teamtabelle nach punkten der Teams sortiert zeigen -->
+
+  <h2>Team Tabelle</h2>
+    <table class="table table-hover">
+  <tr>
+    <th>Team</th>
+    <th>Spiele gespielt</th>
+    <th>Torverhältnis</th>
+    <th>Punkte</th>
+  </tr>
+  <tr>
+    <td>EHC Biel-Bienne</td>
+    <td>24</td>
+    <td>108:86</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>HC Davos</td>
+    <td>23</td>
+    <td>150:99</td>
+    <td>40</td>
   </tr>
     </table>
 
