@@ -29,6 +29,29 @@
 <div class="m-3">
     <h1>Hallo {{ name }}</h1>
 
+
+  <h2>Team Tabelle</h2>
+  <table class="table table-hover table-striped">
+    <thead class="thead-dark">
+    <th scope="col">Name</th>
+    <th scope="col">Gespielte Spiele</th>
+    <th scope="col">Tore geschossen</th>
+    <th scope="col">Tore erhalten</th>
+    <th scope="col">Punkte</th>
+    </thead>
+    <tbody>
+    {% for team in teamliste %}
+    <tr>
+      <td>{{ team[0] }}</td>
+      <td>{{ team[1] }}</td>
+      <td>{{ team[2] }}</td>
+      <td>{{ team[3] }}</td>
+      <td>{{ team[4] }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+  </table>
+
     <!--Tabelle die Ligatopscorer zeigt also Skorer mit den meisten Goals und Assists zusammen-->
 
     <h2>Liga Topscorer Tabelle</h2>
@@ -111,29 +134,6 @@
     </table>
 
   <!-- Tabelle soll Teamtabelle nach punkten der Teams sortiert zeigen -->
-
-  <h2>Team Tabelle</h2>
-    <table class="table table-hover">
-  <tr>
-    <th>Team</th>
-    <th>Spiele gespielt</th>
-    <th>Torverhältnis</th>
-    <th>Punkte</th>
-  </tr>
-  <tr>
-    <td>EHC Biel-Bienne</td>
-    <td>24</td>
-    <td>108:86</td>
-    <td>42</td>
-  </tr>
-  <tr>
-    <td>HC Davos</td>
-    <td>23</td>
-    <td>150:99</td>
-    <td>40</td>
-  </tr>
-    </table>
-
 
 
 </div>

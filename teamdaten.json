@@ -1,9 +1,23 @@
 [
     {
-        "team_name":"",
-        "gespielte_spiele":"",
-        "tore_geschossen":"",
-        "tore_erhalten":"",
-        "punkte_gemacht":"",
+        "gespielte_spiele":"24",
+        "punkte_gemacht":"61",
+        "team_name":"EHC Biel-Bienne",
+        "tore_erhalten":"83",
+        "tore_geschossen":"100"
+    },
+    {
+        "gespielte_spiele":"33",
+        "punkte_gemacht":"59",
+        "team_name":"HC Davos",
+        "tore_erhalten":"67",
+        "tore_geschossen":"102"
+    },
+    {
+        "gespielte_spiele":"31",
+        "punkte_gemacht":"30",
+        "team_name":"EV Zug",
+        "tore_erhalten":"72",
+        "tore_geschossen":"101"
     }
 ]
