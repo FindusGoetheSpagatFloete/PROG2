@@ -1,18 +1,18 @@
 [
     {
-        "assists":"",
-        "goals":"",
-        "nachname":"",
-        "punkte":"",
-        "team":"",
-        "vorname":""
+        "assists":"31",
+        "goals":"12",
+        "name":"Roman Cervenka",
+        "punkte":"43",
+        "spiele":"35",
+        "team":"Rapperswil-Jona Lakers"
     },
     {
-        "assists":"d",
-        "goals":"d",
-        "nachname":"d",
-        "punkte":"",
-        "team":"d",
-        "vorname":"d"
+        "assists":"16",
+        "goals":"15",
+        "name":"Toni Rajala",
+        "punkte":"31",
+        "spiele":"34",
+        "team":"EHC Biel-Bienne"
     }
 ]

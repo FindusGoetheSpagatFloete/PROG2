@@ -8,8 +8,7 @@ app = Flask("Hello World")
 @app.route("/")
 @app.route("/hello")
 def hello():
-    bla = 23 / 12
-    zahl = round(bla, 2)
+
     s = open("teamdaten.json")
     teamdaten_list = json.load(s)
     team1 = ()
@@ -22,7 +21,21 @@ def hello():
         teamindex = teamindex + 1
 
     team1 = sorted(team1, key=lambda x: x[4], reverse=True)
-    return render_template('index.html', name="Andri",ergebnis=zahl, teamliste=team1)
+
+    s = open("spielerdaten.json")
+    spielerdaten_list = json.load(s)
+    spieler1 = ()
+    spieler2 = ()
+    spielerindex = 0
+
+    for spieler in spielerdaten_list:
+        spieler2 = ((spielerdaten_list[spielerindex]["name"], spielerdaten_list[spielerindex]["team"], spielerdaten_list[spielerindex]["spiele"], spielerdaten_list[spielerindex]["goals"], spielerdaten_list[spielerindex]["assists"],spielerdaten_list[spielerindex]["punkte"]), )
+        spieler1 = spieler1 + spieler2
+        spielerindex = spielerindex + 1
+
+    spieler1 = sorted(spieler1, key=lambda x: x[5], reverse=True)
+
+    return render_template('index.html', name="Andri", teamliste=team1, spielerliste=spieler1)
 
 @app.route("/test", methods= ["GET", "POST"])
 def test():
@@ -30,15 +43,15 @@ def test():
     if request.method == "POST":
         s = open("spielerdaten.json")
         spielerdaten_list = json.load(s)
-        vorname = request.form["vorname"]
-        nachname = request.form["nachname"]
+        name = request.form["name"]
         team = request.form["team"]
+        spiele = request.form["spiele"]
         goals = request.form["goals"]
         assists = request.form["assists"]
         punkte = request.form["punkte"]
 
 
-        spielerdaten_list.append({"vorname": vorname, "nachname": nachname, "team": team, "goals": goals, "assists": assists,"punkte": punkte})
+        spielerdaten_list.append({"name": name, "team": team, "spiele": spiele, "goals": goals, "assists": assists,"punkte": punkte})
 
         with open("spielerdaten.json", "w") as f:
             json.dump(spielerdaten_list, f, indent=4, separators=(",", ":"), sort_keys=True)

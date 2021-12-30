@@ -18,7 +18,7 @@
           <a class="nav-link" aria-current="page" href="{{ url_for('hello') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ url_for('test') }}">Link zu Wurstwasser</a>
+          <a class="nav-link active" aria-current="page" href="{{ url_for('test') }}">Spieler Formular</a>
         </li>
         </li>
         <li class="nav-item">
@@ -32,17 +32,17 @@
 <form method="POST" class="m-5 w-25">
   <h2>Spieler erfassen</h2>
   <div class="form-group">
-    <label for="exampleInputEmail1">Vorname</label>
-    <input type="text" class="form-control" name="vorname" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="daten eintragen">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="daten eintragen">
   </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Nachname</label>
-    <input type="text" name="nachname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-  </div>
-
   <div class="form-group">
     <label for="exampleInputEmail1">Team</label>
     <input type="text" name="team" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Spiele</label>
+    <input type="text" name="spiele" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
   </div>
 
   <div class="form-group">

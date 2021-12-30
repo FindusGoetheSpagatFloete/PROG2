@@ -17,7 +17,7 @@
           <a class="nav-link active" aria-current="page" href="{{ url_for('hello') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{ url_for('test') }}">Link zu Wurstwasser</a>
+          <a class="nav-link" aria-current="page" href="{{ url_for('test') }}">Spieler Formular</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{{ url_for('team_formular') }}">Team Formular</a>
@@ -38,6 +38,8 @@
     <th scope="col">Tore geschossen</th>
     <th scope="col">Tore erhalten</th>
     <th scope="col">Punkte</th>
+    <th scope="col">Punkte pro Spiel</th>
+    <th scope="col">Punkteausbeute (%)</th>
     </thead>
     <tbody>
     {% for team in teamliste %}
@@ -54,35 +56,30 @@
 
     <!--Tabelle die Ligatopscorer zeigt also Skorer mit den meisten Goals und Assists zusammen-->
 
-    <h2>Liga Topscorer Tabelle</h2>
-    <table class="table table-hover">
-  <tr>
-    <th>Player</th>
-    <th>Team</th>
-    <th>Spiele</th>
-    <th>Points</th>
-    <th>Goals</th>
-    <th>Assists</th>
-    <th>Punkte pro Spiel</th>
-  </tr>
-  <tr>
-    <td>Toni Rajala</td>
-    <td>EHC Biel</td>
-    <td>12</td>
-    <td>23</td>
-    <td>11</td>
-    <td>12</td>
-    <td>{{ ergebnis }}</td>
-  </tr>
-  <tr>
-    <td>Matthias Bromé</td>
-    <td>HC Davos</td>
-    <td>10</td>
-    <td>22</td>
-    <td>8</td>
-    <td>14</td>
-    <td>PPG</td>
-  </tr>
+    <h2>Liga Topscorers</h2>
+  <table class="table table-hover table-striped">
+  <thead class="thead-dark">
+    <th scope="col">Name</th>
+    <th scope="col">Team</th>
+    <th scope="col">Spiele</th>
+    <th scope="col">Goals</th>
+    <th scope="col">Assists</th>
+    <th scope="col">Punkte</th>
+    <th scope="col">Punkte pro Spiel</th>
+  </thead>
+
+  <tbody>
+    {% for spieler in spielerliste %}
+    <tr>
+      <td>{{ spieler[0] }}</td>
+      <td>{{ spieler[1] }}</td>
+      <td>{{ spieler[2] }}</td>
+      <td>{{ spieler[3] }}</td>
+      <td>{{ spieler[4] }}</td>
+      <td>{{ spieler[5] }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
     </table>
 
     <!--Tabelle die die besten Goalscorer zeigt, Spieler mit den meisten Goals oben-->
