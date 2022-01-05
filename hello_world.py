@@ -35,7 +35,7 @@ def hello():
 
     spieler1 = sorted(spieler1, key=lambda x: x[5], reverse=True)
 
-    return render_template('index.html', name="Andri", teamliste=team1, spielerliste=spieler1)
+    return render_template('index.html', teamliste=team1, spielerliste=spieler1)
 
 @app.route("/test", methods= ["GET", "POST"])
 def test():
