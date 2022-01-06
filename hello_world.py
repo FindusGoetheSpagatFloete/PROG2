@@ -11,31 +11,35 @@ def hello():
 
     s = open("teamdaten.json")
     teamdaten_list = json.load(s)
-    team1 = ()
-    team2 = ()
-    teamindex = 0
+    teamliste = []
 
     for team in teamdaten_list:
-        team2 = ((teamdaten_list[teamindex]["team_name"], teamdaten_list[teamindex]["gespielte_spiele"], teamdaten_list[teamindex]["tore_geschossen"], teamdaten_list[teamindex]["tore_erhalten"], teamdaten_list[teamindex]["punkte_gemacht"]), )
-        team1 = team1 + team2
-        teamindex = teamindex + 1
+        max_punkte = int(team["gespielte_spiele"])*3
+        punkteausbeute = int(team["punkte_gemacht"])*100/max_punkte
+        punkteausbeute = str(round(punkteausbeute,2))
+        punkte_pro_spiel = int(team["punkte_gemacht"])/int(team["gespielte_spiele"])
+        punkte_pro_spiel = str(round(punkte_pro_spiel,1))
+        teamliste.append((team["team_name"], team["gespielte_spiele"], team["tore_geschossen"], team["tore_erhalten"], team["punkte_gemacht"],punkte_pro_spiel, punkteausbeute), )
 
-    team1 = sorted(team1, key=lambda x: x[4], reverse=True)
+    teamliste = sorted(teamliste, key=lambda x: x[4], reverse=True)
 
     s = open("spielerdaten.json")
     spielerdaten_list = json.load(s)
-    spieler1 = ()
-    spieler2 = ()
-    spielerindex = 0
+    spielerliste = []
 
     for spieler in spielerdaten_list:
-        spieler2 = ((spielerdaten_list[spielerindex]["name"], spielerdaten_list[spielerindex]["team"], spielerdaten_list[spielerindex]["spiele"], spielerdaten_list[spielerindex]["goals"], spielerdaten_list[spielerindex]["assists"],spielerdaten_list[spielerindex]["punkte"]), )
-        spieler1 = spieler1 + spieler2
-        spielerindex = spielerindex + 1
+        punkte_p_spiel = int(spieler["punkte"])/int(spieler["spiele"])
+        punkte_p_spiel = str(round(punkte_p_spiel,1))
+        spielerliste.append((spieler["name"], spieler["team"], spieler["spiele"], spieler["goals"], spieler["assists"],spieler["punkte"],punkte_p_spiel), )
 
-    spieler1 = sorted(spieler1, key=lambda x: x[5], reverse=True)
 
-    return render_template('index.html', teamliste=team1, spielerliste=spieler1)
+    spielerliste = sorted(spielerliste, key=lambda x: x[5], reverse=True)
+
+
+
+
+
+    return render_template('index.html', teamliste=teamliste, spielerliste=spielerliste)
 
 @app.route("/test", methods= ["GET", "POST"])
 def test():
