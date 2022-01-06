@@ -1,6 +1,6 @@
 [
     {
-        "gespielte_spiele":"24",
+        "gespielte_spiele":"34",
         "punkte_gemacht":"61",
         "team_name":"EHC Biel-Bienne",
         "tore_erhalten":"83",
@@ -19,5 +19,40 @@
         "team_name":"EV Zug",
         "tore_erhalten":"72",
         "tore_geschossen":"101"
+    },
+    {
+        "gespielte_spiele":"34",
+        "punkte_gemacht":"71",
+        "team_name":"Fribourg-Gott\u00e9ron",
+        "tore_erhalten":"84",
+        "tore_geschossen":"115"
+    },
+    {
+        "gespielte_spiele":"35",
+        "punkte_gemacht":"67",
+        "team_name":"Rapperswil-Jona Lakers",
+        "tore_erhalten":"88",
+        "tore_geschossen":"116"
+    },
+    {
+        "gespielte_spiele":"34",
+        "punkte_gemacht":"58",
+        "team_name":"ZSC Lions",
+        "tore_erhalten":"93",
+        "tore_geschossen":"112"
+    },
+    {
+        "gespielte_spiele":"34",
+        "punkte_gemacht":"51",
+        "team_name":"HC Lugano",
+        "tore_erhalten":"98",
+        "tore_geschossen":"99"
+    },
+    {
+        "gespielte_spiele":"34",
+        "punkte_gemacht":"18",
+        "team_name":"HC Ajoje",
+        "tore_erhalten":"148",
+        "tore_geschossen":"61"
     }
 ]

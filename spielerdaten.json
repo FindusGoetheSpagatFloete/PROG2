@@ -14,5 +14,53 @@
         "punkte":"31",
         "spiele":"34",
         "team":"EHC Biel-Bienne"
+    },
+    {
+        "assists":"22",
+        "goals":"23",
+        "name":"Jesper Olofsson",
+        "punkte":"45",
+        "spiele":"35",
+        "team":"SCL Tigers"
+    },
+    {
+        "assists":"28",
+        "goals":"11",
+        "name":"Christopher DiDomenico",
+        "punkte":"39",
+        "spiele":"34",
+        "team":"Fribourg-Gott\u00e9ron"
+    },
+    {
+        "assists":"29",
+        "goals":"8",
+        "name":"Henrik T\u00f6mmernes",
+        "punkte":"37",
+        "spiele":"31",
+        "team":"Gen\u00e8ve-Servette HC"
+    },
+    {
+        "assists":"30",
+        "goals":"12",
+        "name":"Alexandre Grenier",
+        "punkte":"42",
+        "spiele":"35",
+        "team":"SCL Tigers"
+    },
+    {
+        "assists":"19",
+        "goals":"16",
+        "name":"Harri Pesonen",
+        "punkte":"35",
+        "spiele":"35",
+        "team":"SCL Tigers"
+    },
+    {
+        "assists":"24",
+        "goals":"11",
+        "name":"Matthias Brom\u00e9",
+        "punkte":"35",
+        "spiele":"26",
+        "team":"HC Davos"
     }
 ]
