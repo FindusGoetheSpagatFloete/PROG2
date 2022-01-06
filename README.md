@@ -6,6 +6,7 @@ Verwendete programme und Sprachen:
 - Bootstrap (CSS)
 - Flask
 - JSON
+- Git Bash
 
 ##Pojekt Hockeytabellen:
 Im Projekt soll es möglich sein Hockeyteams und Spieler via Formular zu erfassen. 
@@ -22,6 +23,16 @@ ein Spieler im Durchschnitt pro Spiel macht. Dies ist spannend, wenn ein Spieler
 Dann erscheint er nie in einer Scorertabelle, obwohl er in Sachen Punkte pro Spiel gut dabei wäre
 aber das er aufgrund der Verletzung Spiele verpasst hat, ist er in der Tabelle nicht zu sehen.
 
+###Input durch Formular
+![img.png](img.png)
+
+###Output durch Tabelle
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+
+###Basic Berechnungen in Python
+![img_3.png](img_3.png)
+
 ###Erfahrungen:
 Python und HTML kannte ich schon. Beides in Kombination aber noch nicht.
 Das war Anfangs eine Schwierigkeit. Dann kam noch JSON dazu. 
@@ -33,4 +44,6 @@ Daten in JSON zu speichern ist einfach. Doch all dies zu kombinieren bereitete m
 Oft lief es wie geschmiert und ich kam gut vorwärts. Doch dann, wie es beim Programmieren so ist, 
 verbrachte ich Stunden einen Fehler zu finden. Der Debugger hilft in vielen Situationen
 doch nicht immer. Und wenn nicht, gilt es zu googeln. Oft versucht man 10 verschiedene Lösungsansätze und der letzte funktioniert dann.
-Stackoverflow und Quora waren wir oft eine grosse Hilfe.
+Stackoverflow und Quora waren mir oft eine grosse Hilfe.
+Mit Github und Git Bash zu arbeiten fand ich super. Man hat dezentrale Backups der Arbeit 
+auf die man immer zurückgreifen kann. Zudem muss man nicht an einen Abgabetermin denken. Sehr praktisch!
