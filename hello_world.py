@@ -32,7 +32,8 @@ def hello():
 
     teamliste = sorted(teamliste, key=lambda x: x[4], reverse=True)
 
-#funktioniert gleich wie oben nur sind die Daten verschieden. Punkte #pro Spiel werden gleich wie bei den Teams berechnet
+#funktioniert gleich wie oben nur sind die Daten verschieden. Punkte
+#pro Spiel werden gleich wie bei den Teams berechnet
 #alle Daten stammen aus dem json-file spielerdaten.
     s = open("spielerdaten.json")
     spielerdaten_list = json.load(s)

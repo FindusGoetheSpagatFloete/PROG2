@@ -1,6 +1,6 @@
 # PROG2
 
-Verwendete programme und Sprachen:
+Verwendete Programme und Sprachen:
 - HTML
 - Python
 - Bootstrap (CSS)
@@ -8,7 +8,7 @@ Verwendete programme und Sprachen:
 - JSON
 - Git Bash
 
-##Pojekt Hockeytabellen:
+## Pojekt Hockeytabellen: ##
 Im Projekt soll es möglich sein Hockeyteams und Spieler via Formular zu erfassen. 
 Die eingetragenen Daten werden anschliessend in einem dazugehörigen JSON-File gespeichert.
 Diese Spieler und Teams werden dann in Python in eine Tabelle konvertiert und in HTML wiedergegeben.
