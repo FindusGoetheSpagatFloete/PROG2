@@ -22,6 +22,7 @@ Bei den Spielern ist die Zusatzberechnung ebenfalls Punkte pro Spiel. Also wie v
 ein Spieler im Durchschnitt pro Spiel macht. Dies ist spannend, wenn ein Spieler zum Beispiel verletzt ist.
 Dann erscheint er nie in einer Scorertabelle, obwohl er in Sachen Punkte pro Spiel gut dabei wäre
 aber das er aufgrund der Verletzung Spiele verpasst hat, ist er in der Tabelle nicht zu sehen.
+Die Tabellen können zusätzlich via Knopfdruck sortiert werden.
 
 ### Input durch Formular ###
 ![img.png](img.png)

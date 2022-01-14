@@ -61,5 +61,12 @@
         "team_name":"Gen\u00e8ve-Servette HC",
         "tore_erhalten":"93",
         "tore_geschossen":"79"
+    },
+    {
+        "gespielte_spiele":"36",
+        "punkte_gemacht":"32",
+        "team_name":"SCL Tigers",
+        "tore_erhalten":"131",
+        "tore_geschossen":"102"
     }
 ]

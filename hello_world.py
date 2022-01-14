@@ -5,8 +5,8 @@ import json
 
 app = Flask("Hello World")
 
-@app.route("/")
-@app.route("/hello")
+@app.route("/", methods= ["GET", "POST"])
+@app.route("/hello", methods= ["GET", "POST"])
 def hello():
 
 #Diese Funktion öffnet das json-file teamdaten um anschliessend damit arbeiten zu können.
@@ -28,9 +28,26 @@ def hello():
         punkteausbeute = str(round(punkteausbeute,2))
         punkte_pro_spiel = int(team["punkte_gemacht"])/int(team["gespielte_spiele"])
         punkte_pro_spiel = str(round(punkte_pro_spiel,1))
-        teamliste.append((team["team_name"], team["gespielte_spiele"], team["tore_geschossen"], team["tore_erhalten"], team["punkte_gemacht"],punkte_pro_spiel, punkteausbeute), )
+        teamliste.append((team["team_name"], team["gespielte_spiele"], int(team["tore_geschossen"]), int(team["tore_erhalten"]), team["punkte_gemacht"],punkte_pro_spiel, punkteausbeute), )
 
     teamliste = sorted(teamliste, key=lambda x: x[4], reverse=True)
+
+
+    if request.method == "POST":
+        if request.form.get("name") == "sort":
+            teamliste = sorted(teamliste, key=lambda x: x[0])
+        if request.form.get("gespielte_spiele") == "sort":
+            teamliste = sorted(teamliste, key=lambda x: x[1], reverse=True)
+        if request.form.get("tore_geschossen") == "sort":
+            teamliste = sorted(teamliste, key=lambda x: x[2], reverse=True)
+        if request.form.get("tore_erhalten") == "sort":
+            teamliste = sorted(teamliste, key=lambda x: x[3], reverse=True)
+        if request.form.get("punkte_gemacht") == "sort":
+            teamliste = sorted(teamliste, key=lambda x: x[4], reverse=True)
+        if request.form.get("punkte_pro_spiel") == "sort":
+            teamliste = sorted(teamliste, key=lambda x: x[5], reverse=True)
+        if request.form.get("punkteausbeute") == "sort":
+            teamliste = sorted(teamliste, key=lambda x: x[6], reverse=True)
 
 #funktioniert gleich wie oben nur sind die Daten verschieden. Punkte
 #pro Spiel werden gleich wie bei den Teams berechnet
@@ -42,10 +59,28 @@ def hello():
     for spieler in spielerdaten_list:
         punkte_p_spiel = int(spieler["punkte"])/int(spieler["spiele"])
         punkte_p_spiel = str(round(punkte_p_spiel,1))
-        spielerliste.append((spieler["name"], spieler["team"], spieler["spiele"], spieler["goals"], spieler["assists"],spieler["punkte"],punkte_p_spiel), )
+        spielerliste.append((spieler["name"], spieler["team"], spieler["spiele"], int(spieler["goals"]), spieler["assists"],spieler["punkte"],punkte_p_spiel), )
 
 
     spielerliste = sorted(spielerliste, key=lambda x: x[5], reverse=True)
+
+
+    if request.method == "POST":
+        if request.form.get("name") == "sort":
+            spielerliste = sorted(spielerliste, key=lambda x: x[0])
+        if request.form.get("team") == "sort":
+            spielerliste = sorted(spielerliste, key=lambda x: x[1])
+        if request.form.get("spiele") == "sort":
+            spielerliste = sorted(spielerliste, key=lambda x: x[2], reverse=True)
+        if request.form.get("goals") == "sort":
+            spielerliste = sorted(spielerliste, key=lambda x: x[3], reverse=True)
+        if request.form.get("assists") == "sort":
+            spielerliste = sorted(spielerliste, key=lambda x: x[4], reverse=True)
+        if request.form.get("punkte") == "sort":
+            spielerliste = sorted(spielerliste, key=lambda x: x[5], reverse=True)
+        if request.form.get("punkte_p_spiel") == "sort":
+            spielerliste = sorted(spielerliste, key=lambda x: x[6], reverse=True)
+
 
 #Hier geben wir die Daten der Tabellen und berechungen ans HTML file index.html weiter
     return render_template('index.html', teamliste=teamliste, spielerliste=spielerliste)

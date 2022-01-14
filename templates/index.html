@@ -33,15 +33,16 @@
 
   <!-- die Tabelle zeigt die im Teamformular eingefügten Teams sortiert nach Punkten von oben nach unten-->
   <h2>Tabelle<small class="text-muted"> National League</small></h2>
+  <form method="post">
   <table class="table table-hover table-striped">
     <thead class="thead-dark">
-    <th scope="col">Name</th>
-    <th scope="col">Gespielte Spiele</th>
-    <th scope="col">Tore geschossen</th>
-    <th scope="col">Tore erhalten</th>
-    <th scope="col">Punkte</th>
-    <th scope="col">Punkte pro Spiel</th>
-    <th scope="col">Punkteausbeute (%)</th>
+    <th scope="col">Name <input class="btn btn-secondary" type="submit" name="name" value="sort"> </th>
+    <th scope="col">Gespielte Spiele <input class="btn btn-secondary" type="submit" name="gespielte_spiele" value="sort"></th>
+    <th scope="col">Tore geschossen <input class="btn btn-secondary" type="submit" name="tore_geschossen" value="sort"></th>
+    <th scope="col">Tore erhalten <input class="btn btn-secondary" type="submit" name="tore_erhalten" value="sort"></th>
+    <th scope="col">Punkte <input class="btn btn-secondary" type="submit" name="punkte_gemacht" value="sort"></th>
+    <th scope="col">Punkte pro Spiel <input class="btn btn-secondary" type="submit" name=punkte_pro_spiel value="sort"></th>
+    <th scope="col">Punkteausbeute (%) <input class="btn btn-secondary" type="submit" name=punkteausbeute value="sort"></th>
     </thead>
     <tbody>
     {% for team in teamliste %}
@@ -58,19 +59,21 @@
     {% endfor %}
 </tbody>
   </table>
+    </form>
 
     <!--Tabelle die Ligatopscorer zeigt also Skorer mit den meisten Goals und Assists zusammen, sortiert nach Punkten von oben nach unten-->
 
     <h2>Liga Topscorers</h2>
+  <form method="post">
   <table class="table table-hover table-striped">
   <thead class="thead-dark">
-    <th scope="col">Name</th>
-    <th scope="col">Team</th>
-    <th scope="col">Spiele</th>
-    <th scope="col">Goals</th>
-    <th scope="col">Assists</th>
-    <th scope="col">Punkte</th>
-    <th scope="col">Punkte pro Spiel</th>
+    <th scope="col">Name <input class="btn btn-secondary" type="submit" name="name" value="sort"></th>
+    <th scope="col">Team <input class="btn btn-secondary" type="submit" name="team" value="sort"></th>
+    <th scope="col">Spiele <input class="btn btn-secondary" type="submit" name="spiele" value="sort"></th>
+    <th scope="col">Goals <input class="btn btn-secondary" type="submit" name="goals" value="sort"></th>
+    <th scope="col">Assists <input class="btn btn-secondary" type="submit" name="assists" value="sort"></th>
+    <th scope="col">Punkte <input class="btn btn-secondary" type="submit" name="punkte" value="sort"></th>
+    <th scope="col">Punkte pro Spiel <input class="btn btn-secondary" type="submit" name="punkte_p_spiel" value="sort"></th>
   </thead>
 
   <tbody>
@@ -87,6 +90,7 @@
     {% endfor %}
 </tbody>
     </table>
+     </form>
 
 </div>
 </body>
